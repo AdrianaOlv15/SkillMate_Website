@@ -1,0 +1,82 @@
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&family=Ubuntu:wght@700&display=swap');
+
+body{
+    background-color: rgb(237, 249, 255);
+    text-align: center;
+}
+
+.text { font-size:300%; color:rgb(40, 44, 65); font-family: 'Signika', sans-serif;}
+.title {font-size:500%; color:rgb(0, 1, 88); font-family: 'Ubuntu', sans-serif;}
+.title2 {font-size:100%; color:rgb(0, 1, 88); font-family: 'Ubuntu', sans-serif;}
+
+.ubuntu{font-family: 'Ubuntu', sans-serif;}
+.signika{font-family: 'Signika', sans-serif}
+
+.space{color:rgb(237, 249, 255); }
+
+.page_title {font-size:450%; 
+             color:rgb(0, 1, 88); 
+             font-family: 'Ubuntu', sans-serif;
+}    
+
+.button {   font-size:30px; 
+            border-style:solid; 
+            border-color:rgb(223, 104, 0); 
+            background-color:rgb(223, 104, 0);  
+            color: white;   
+            padding: 10px;
+            text-align: center;
+            height: 60px;
+}
+
+.skillsBtn {    font-size:30px; 
+                border-style:solid; 
+                border-color:rgb(0, 80, 177);
+                background-color:rgb(0, 80, 177);
+                font-family: 'Ubuntu', sans-serif;
+                color: white;   
+                padding: 10px;
+                text-align: center;
+                height: 100px;
+                width: 300px;
+}
+
+.backBtn {      font-size:20px; 
+                border-style:solid; 
+                border-color:rgb(223, 104, 0); 
+                background-color:rgb(223, 104, 0); 
+                font-family: 'Ubuntu', sans-serif;
+                color: white;   
+                padding: 10px;
+                text-align: center;
+                height: 50px;
+                width: 134px;
+}
+
+.refreshBtn {   font-size:20px; 
+                border-style:solid; 
+                border-color:rgb(0, 80, 177);
+                background-color:rgb(0, 80, 177);
+                font-family: 'Ubuntu', sans-serif;
+                color: white;   
+                padding: 10px;
+                text-align: center;
+                height: 50px;
+                width: 140px;
+}
+
+
+.btn {          font-size:30px; 
+                border-style:solid; 
+                border-color:rgb(0, 80, 177);
+                background-color:rgb(0, 80, 177);
+                font-family: 'Ubuntu', sans-serif;
+                color: white;   
+                padding: 10px;
+                text-align: center;
+                height: 150px;
+                width: 100px;
+}
