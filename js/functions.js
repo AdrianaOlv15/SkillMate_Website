@@ -207,8 +207,8 @@ function setPeopleList(){
       space_obj.style.color = 'white';
       space_obj.style.background = 'rgb(0, 1, 88)';
       space_obj.style.width = '55vw';
-      space_obj.style.height = '5vw';
-      space_obj.style.fontSize = '2.75vw'
+      space_obj.style.height = '7vh';
+      space_obj.style.fontSize = '4vh'
       space_obj.style.borderStyle = 'solid'; 
       space_obj.style.borderColor = 'rgb(0, 1, 88)';
 
@@ -218,8 +218,8 @@ function setPeopleList(){
       // Making Letters White
       space_obj2.style.color = 'white';
       space_obj2.style.width = '25vw';
-      space_obj2.style.fontSize = '2.75vw'
-      space_obj2.style.height = '5vw';
+      space_obj2.style.fontSize = '4vh'
+      space_obj2.style.height = '7vh';
 
       // Displaying Connectory Status (Red / Green)
       if (peopleArray[i].status == 1){
