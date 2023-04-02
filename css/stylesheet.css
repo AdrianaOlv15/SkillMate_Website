@@ -8,8 +8,8 @@ body{
     text-align: center;
 }
 
-.text { font-size:5vw; color:rgb(40, 44, 65); font-family: 'Signika', sans-serif;}
-.title {font-size:12vw; color:rgb(0, 1, 88); font-family: 'Ubuntu', sans-serif;}
+.text { font-size:4vw; color:rgb(40, 44, 65); font-family: 'Signika', sans-serif;}
+.title {font-size:10vw; color:rgb(0, 1, 88); font-family: 'Ubuntu', sans-serif;}
 .title2 {font-size:100%; color:rgb(0, 1, 88); font-family: 'Ubuntu', sans-serif;}
 
 .ubuntu{font-family: 'Ubuntu', sans-serif;}
@@ -17,7 +17,7 @@ body{
 
 .space{color:rgb(237, 249, 255); }
 
-.page_title {font-size:8.5vw; 
+.page_title {font-size:7vw; 
              color:rgb(0, 1, 88); 
              font-family: 'Ubuntu', sans-serif;
 }    
@@ -46,7 +46,7 @@ body{
     width: 40vw;
 }
 
-.skillsBtn {    font-size:3.5vw; 
+.skillsBtn {    font-size:2.75vw; 
                 border-style:solid; 
                 border-color:rgb(0, 80, 177);
                 background-color:rgb(0, 80, 177);
@@ -54,23 +54,23 @@ body{
                 color: white;   
                 padding: 10px;
                 text-align: center;
-                height: 8vw;
+                height: 5vw;
                 width: 40vw;
 }
 
-.backBtn {      font-size:3vw; 
+.backBtn {      font-size:2.5vw; 
                 border-style:solid; 
                 border-color:rgb(223, 104, 0); 
                 background-color:rgb(223, 104, 0); 
                 font-family: 'Ubuntu', sans-serif;
                 color: white;   
-                padding: 10px;
                 text-align: center;
-                height: 6vw;
+                height: 5vw;
                 width: 16vw;
 }
 
-.skills_backBtnSpace {      font-size:3vw; 
+.skills_backBtnSpace {      
+    font-size:3vw; 
     border-style:solid; 
     border-color:rgb(237, 249, 255); 
     background-color:rgb(237, 249, 255);
@@ -78,6 +78,17 @@ body{
     padding: 10px;
     height: 6vw;
     width: 64vw;
+}
+
+.person_backBtnSpace {      
+    font-size:3vw; 
+    border-style:solid; 
+    border-color:rgb(237, 249, 255); 
+    background-color:rgb(237, 249, 255);
+    color: rgb(0, 51, 76); 
+    padding: 10px;
+    height: 6vw;
+    width: 50vw;
 }
 
 
@@ -96,25 +107,25 @@ body{
 
 
 .name{
-    font-size:3vw; 
+    font-size:2vw; 
     color:rgb(255, 255, 255); 
     background-color:rgb(0, 1, 88); 
     font-family: 'Signika', sans-serif;
     border-style: solid; 
     border-color:rgb(0, 1, 88); 
-    height: 10%;
-    width: 30%;
+    height: 3.5vw;
+    width: 30vw;
 }
 
 .skillHead{
-    font-size:3vw; 
-    color:rgb(255, 255, 255); 
-    background-color:rgb(0, 1, 88); 
+    font-size:2vw; 
+    color:rgb(0, 1, 88);
+    background-color:rgb(255, 255, 255);
     font-family: 'Signika', sans-serif;
     border-style: solid; 
     border-color:rgb(0, 1, 88); 
-    height: 10%;
-    width: 45%;
+    height: 3.5vw;
+    width: 50vw;
 }
 
 .skillDescrip{
@@ -124,17 +135,17 @@ body{
     font-family: 'Signika', sans-serif;
     border-style: solid; 
     border-color:rgb(0, 1, 88); 
-    height: 10%;
-    width: 45%;
+    height: 5vw;
+    width: 50vw;
 }
 .connect_status{
-    font-size:1.75vw; 
+    font-size:2vw; 
     color:rgb(255, 255, 255); 
     background-color:rgb(83, 83, 83); 
     font-family: 'Signika', sans-serif;
     border-style: solid; 
-    height: 10%;
-    width: 30%;
+    height: 3vw;
+    width: 80.5vw;
 }
 
 .item1 { grid-area: header; }

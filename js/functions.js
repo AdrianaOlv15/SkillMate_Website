@@ -207,8 +207,8 @@ function setPeopleList(){
       space_obj.style.color = 'white';
       space_obj.style.background = 'rgb(0, 1, 88)';
       space_obj.style.width = '55vw';
-      space_obj.style.height = '8vw';
-      space_obj.style.fontSize = '4vw'
+      space_obj.style.height = '5vw';
+      space_obj.style.fontSize = '2.75vw'
       space_obj.style.borderStyle = 'solid'; 
       space_obj.style.borderColor = 'rgb(0, 1, 88)';
 
@@ -218,8 +218,8 @@ function setPeopleList(){
       // Making Letters White
       space_obj2.style.color = 'white';
       space_obj2.style.width = '25vw';
-      space_obj2.style.fontSize = '4vw'
-      space_obj2.style.height = '8vw';
+      space_obj2.style.fontSize = '2.75vw'
+      space_obj2.style.height = '5vw';
 
       // Displaying Connectory Status (Red / Green)
       if (peopleArray[i].status == 1){
@@ -312,18 +312,18 @@ function loadProfile(){
   element = document.getElementById("descrip_headline");
 
   //console.log("skill num = " + skillNum);
-  element.innerText = "EXPERIENCE IN\n" + skillTitlesArray[skillNum];
+  element.innerText = "EXPERIENCE IN " + skillTitlesArray[skillNum];
 
   // load skill description
-  element = document.getElementById("descrip_content");
-  element.innerText = personPicked.getSkill(skillInt);
+  //element = document.getElementById("descrip_content");
+  //element.innerText = personPicked.getSkill(skillInt);
 
   // load status connect_status
   space_obj2 = document.getElementById("connect_status");
   // Displaying Connectory Status (Red / Green)
   if (personPicked.status == 1){
     space_obj2.style.background = 'rgb(40, 141, 0)';
-    space_obj2.innerText = "CURRENTLY IN THE CONNECTORY";
+    space_obj2.innerText = "IN THE CONNECTORY";
     space_obj2.style.borderColor = 'rgb(40, 141, 0)';
   } else {
     space_obj2.style.background = 'rgb(208, 0, 0)';
