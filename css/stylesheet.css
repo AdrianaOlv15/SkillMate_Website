@@ -46,7 +46,7 @@ body{
     width: 40vw;
 }
 
-.skillsBtn {    font-size:3.5vh; 
+.skillsBtn {    font-size:2.75vw; 
                 border-style:solid; 
                 border-color:rgb(0, 80, 177);
                 background-color:rgb(0, 80, 177);
@@ -54,7 +54,7 @@ body{
                 color: white;   
                 padding: 10px;
                 text-align: center;
-                height: 8vh;
+                height: 5vw;
                 width: 40vw;
 }
 
@@ -64,6 +64,7 @@ body{
                 background-color:rgb(223, 104, 0); 
                 font-family: 'Ubuntu', sans-serif;
                 color: white;   
+                padding: 10px;
                 text-align: center;
                 height: 5vw;
                 width: 16vw;
