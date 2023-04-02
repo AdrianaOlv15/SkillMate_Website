@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+</head>
+<body>
+    <div>
+        <table>
+            <thread>
+                <th>Name</th>
+                <th>Status</th>
+            </thread>
+            <tbody id="tbody1"></tbody>
+        </table>
+    </div>
+    <script>
+        // --- Funcitons to till out the table ---
+        
+        var tbody = document.getElementById('tbody');
+        
+        // function to add a person record to the table 
+        function AddItemToTable(number, name, status){
+            
+            let trow = document.createElement("tr");    // creating a row
+            
+            let td1 = document.createElement('td');     // creating the column spaces for the row
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            
+            td1.innerHTML = number;                     // filling the column spaces
+            td2.innerHTML = name;
+            td3.innerHTML = status;
+           
+            trow.appendChild(td1);                      // linking the columns to the row
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            
+            tbody.appendChild(trow);                    // linking the row to the table
+        }
+
+        // function to add all the records to the table
+        function AddAllItemsToTable(TheUsers){
+            tbody.innerHTML=" ";
+            TheUsers.array.forEach(element => {
+                
+            });
+        }
+
+    </script>
+</body>
+</html>

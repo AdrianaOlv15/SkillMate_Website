@@ -9,15 +9,25 @@
 
 </head>
 
-<body onload="updatePerson()">
+<body onload="loadProfile()">
     
     <script src="../js/functions.js"></script>
 
-    <tag id= "Name" class="page_title" > [NAME GOES HERE] </tag><br><br>
+    <tag class="page_title" > CONTACT INFO </tag><br><br>
 
-    <button class="backBtn" onclick="backToSkillsMenu()" > ⇦ BACK </button>
+    <button class="backBtn" onclick="backToSkillsPage()" > ⇦ BACK </button>
     <tag class="space">__________________________________</tag>
-    <button class="refreshBtn"> REFRESH ↻</button><br><br>
+    <button class="refreshBtn"> REFRESH ↻</button>
+    <br><br>
+    <button id = "person_name" class="name"> NAME GOES HERE </button>
+    <br><br>
+    <img id="profile_pic" src="../images/empty.jpeg" width="30%" height="30%">
+    <br><br>
+    <button class="connect_status" id="connect_status">CURRENTLY IN THE CONNECTORY</button>
+    <br><br>
+    <button class="skillHead" id="descrip_headline">EXPERIENCE IN</button>
+    <br><br>
+    <button class="skillDescrip" id="descrip_content">DESCRIPTION CONTENT HERE</button><br><br>
 
 </body>
 </html>
