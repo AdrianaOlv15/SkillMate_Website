@@ -37,7 +37,7 @@
  // Array of Title for Skill Pages 
 let skillTitlesArray = ["3D PRINTING", "SOLDERING", "PROGRAMMING", "GRAPHIC DESIGN", 
                         "PHOTO/VIDEO EDITING", "3D MODELING", "TIME MANAGEMENT", "LANGUAGES",
-                        "MARKETING", "REMOTE MEETING\nTROUBLESHOOT"];
+                        "MARKETING", "REMOTE MEETINGS"];
 
 // ppl labels that will be populated on the Skill Pages       
 let spacesArray = ["p0_space", "p1_space", "p2_space", "p3_space", "p4_space", "p5_space",
@@ -59,9 +59,10 @@ function Person(first, last, org, print3d, solder, prog, graph, photo, model3d, 
     this.picture = "../images/empty.jpeg";
     this.orgName = org;
     // contact info
-    this.email = "none";
-    this.phoneNumber = "none";
-    this.socialMedia = "none";
+    this.contact1_string = "none";
+    this.contact2_string = "none";
+    this.contact1_info = "none";
+    this.contact2_info = "none";
     // skills info
     this.printing3D = print3d;  // 1
     this.soldering = solder;    // 2
@@ -100,9 +101,16 @@ function Person(first, last, org, print3d, solder, prog, graph, photo, model3d, 
     }
  
     // methods to write contact info
-    this.addEmail = function (input) { this.email = input;}
-    this.addPhone = function (input) { this.phoneNumber = input; }
-    this.addSocial = function (input) { this.socialMedia = input; }
+    this.addcontact1 = function (input_string, input_info) { 
+      this.contact1_string = input_string; 
+      this.contact1_info = input_info;
+    }
+
+    this.addcontact2 = function (input_string, input_info) { 
+      this.contact2_string = input_string; 
+      this.contact2_info = input_info;
+    }
+
     this.addPicture = function (input){ this.picture = input;}
 
     this.getSkill = function(skillNum){
@@ -141,6 +149,19 @@ person5.addPicture("../images/labiba.PNG");
 person6.addPicture("../images/erwin.PNG");
 person7.addPicture("../images/mike.PNG");
 person8.addPicture("../images/viktor.PNG");
+
+// Adding contact info for people
+person0.addcontact1("INSTAGRAM","@kenny_acker"); person0.addcontact2("EMAIL", "kennyackerman@gmail.com");
+person1.addcontact1("INSTAGRAM", "@adriana_olv15"); person1.addcontact2("DISCORD", "AdrianaOC#1108");
+person2.addcontact1("LINKEDIN","www.linkedin.com/in/mira-06"); person2.addcontact2("DISCORD", "MiraSW#1234");
+person3.addcontact1("LINKEDIN","www.linkedin.com/in/Jazmin-SH08"); person3.addcontact2("INSTAGRAM", "@jaz_santoyo11");
+person4.addcontact1("EMAIL", "ale_perez@yahoo.com"); person4.addcontact2("DISCORD", "Alejandro06#5432");
+person5.addcontact1("PHONE", "(847) 223-3451"); person5.addcontact2("EMAIL", "labiba_hussien@hotmail.com");
+person6.addcontact1("WEBSITE", "surverycorps.org"); person6.addcontact2("PHONE", "(340) 535 - 7556");
+person7.addcontact1("LINKEDIN", "www.linkedin.com/in/Mike-Zacharias"); person7.addcontact2("PHONE", "(228) 112 - 3455");
+person8.addcontact1("DISCORD", "ViktorYuri#3333"); person8.addcontact2("WEBSITE", "YuriOnIce.com");
+
+
 
 // MOVING FORWARD THRU PAGES ///////////////////////////////////////////////////////////////////////    
 
@@ -207,8 +228,8 @@ function setPeopleList(){
       space_obj.style.color = 'white';
       space_obj.style.background = 'rgb(0, 1, 88)';
       space_obj.style.width = '55vw';
-      space_obj.style.height = '8vw';
-      space_obj.style.fontSize = '4vw'
+      space_obj.style.height = '5vw';
+      space_obj.style.fontSize = '3vw'
       space_obj.style.borderStyle = 'solid'; 
       space_obj.style.borderColor = 'rgb(0, 1, 88)';
 
@@ -218,8 +239,8 @@ function setPeopleList(){
       // Making Letters White
       space_obj2.style.color = 'white';
       space_obj2.style.width = '25vw';
-      space_obj2.style.fontSize = '4vw'
-      space_obj2.style.height = '8vw';
+      space_obj2.style.fontSize = '3vw'
+      space_obj2.style.height = '5vw';
 
       // Displaying Connectory Status (Red / Green)
       if (peopleArray[i].status == 1){
@@ -330,5 +351,17 @@ function loadProfile(){
     space_obj2.innerText = "NOT IN THE CONNECTORY";
     space_obj2.style.borderColor = 'rgb(208, 0, 0)';
   }
+
+  // load their contact1
+  element = document.getElementById("contact1_st");
+  element.innerText = personPicked.contact1_string;
+  element = document.getElementById("contact1");
+  element.innerText = personPicked.contact1_info;
+
+  // load their contact2
+  element = document.getElementById("contact2_st");
+  element.innerText = personPicked.contact2_string;
+  element = document.getElementById("contact2");
+  element.innerText = personPicked.contact2_info;
 }
 
