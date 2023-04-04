@@ -156,8 +156,8 @@ person1.addcontact1("INSTAGRAM", "@adriana_olv15"); person1.addcontact2("DISCORD
 person2.addcontact1("LINKEDIN","www.linkedin.com/in/mira-06"); person2.addcontact2("DISCORD", "MiraSW#1234");
 person3.addcontact1("LINKEDIN","www.linkedin.com/in/Jazmin-SH08"); person3.addcontact2("INSTAGRAM", "@jaz_santoyo11");
 person4.addcontact1("EMAIL", "ale_perez@yahoo.com"); person4.addcontact2("DISCORD", "Alejandro06#5432");
-person5.addcontact1("PHONE", "(847) 223-3451"); person5.addcontact2("EMAIL", "labiba_hussien@hotmail.com");
-person6.addcontact1("WEBSITE", "surverycorps.org"); person6.addcontact2("PHONE", "(340) 535 - 7556");
+person5.addcontact1("PHONE", "(847) 223 - 3451"); person5.addcontact2("EMAIL", "labiba_hussien@hotmail.com");
+person6.addcontact1("WEBSITE", "surveycorps.org"); person6.addcontact2("PHONE", "(340) 535 - 7556");
 person7.addcontact1("LINKEDIN", "www.linkedin.com/in/Mike-Zacharias"); person7.addcontact2("PHONE", "(228) 112 - 3455");
 person8.addcontact1("DISCORD", "ViktorYuri#3333"); person8.addcontact2("WEBSITE", "YuriOnIce.com");
 
@@ -181,6 +181,10 @@ function movePersonPage(tagName){
   let name = element.innerText;
   sessionStorage.setItem("Person_Name",name);
   window.location.replace('person_page.html'); // page change
+}
+
+function whoshere(){
+  window.location.replace('Pages/full_list.html');
 }
 // MOVING BACK THRU PAGES ///////////////////////////////////////////////////////////////////////    
 
