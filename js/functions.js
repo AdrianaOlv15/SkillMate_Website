@@ -1,38 +1,3 @@
-// firebase analytics 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-// Import the functions you need from the SDKs you need
-//import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-//import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: "AIzaSyC_jgj9zfAr5KIVQXlKPXby5Od2BOaTnGM",
-//   authDomain: "rpi-mlx90614-821e6.firebaseapp.com",
-//   databaseURL: "https://rpi-mlx90614-821e6-default-rtdb.firebaseio.com",
-//   projectId: "rpi-mlx90614-821e6",
-//   storageBucket: "rpi-mlx90614-821e6.appspot.com",
-//   messagingSenderId: "213693056033",
-//   appId: "1:213693056033:web:cca76584faaa68919b0f60",
-//   measurementId: "G-Q5NXQZZXN4"
-// };
-
-// // Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
-
-// //import{getDatabase, ref, child, onValue, get} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-
-// const db = getDatabase();
-
-
-// function GetDataRealTime(){
-
-//}
 
  // Array of Title for Skill Pages 
 let skillTitlesArray = ["3D PRINTING", "SOLDERING", "PROGRAMMING", "GRAPHIC DESIGN", 
@@ -369,3 +334,64 @@ function loadProfile(){
   element.innerText = personPicked.contact2_info;
 }
 
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+        import { getDatabase, ref, set, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+
+        /***** Firebase config *****/
+        const firebaseConfig = {
+            apiKey: "AIzaSyC_jgj9zfAr5KIVQXlKPXby5Od2BOaTnGM",
+            authDomain: "rpi-mlx90614-821e6.firebaseapp.com",
+            databaseURL: "https://rpi-mlx90614-821e6-default-rtdb.firebaseio.com",
+            projectId: "rpi-mlx90614-821e6",
+            storageBucket: "rpi-mlx90614-821e6.appspot.com",
+            messagingSenderId: "213693056033",
+            appId: "1:213693056033:web:cca76584faaa68919b0f60"
+        };
+        
+        var db = getDatabase();
+        var number = 0;
+        var tbody = document.getElementById('tbody');
+        
+        // function to add a person record to the table 
+        function AddItemToTable(name, status){
+            
+            let trow = document.createElement("tr");    // creating a row
+            
+            let td1 = document.createElement('td');     // creating the column spaces for the row
+            let td2 = document.createElement('td');
+            let td3 = document.createElement('td');
+            
+            td1.innerHTML = ++number;                     // filling the column spaces
+            td2.innerHTML = name;
+            td3.innerHTML = status;
+           
+            trow.appendChild(td1);                      // linking the columns to the row
+            trow.appendChild(td2); 
+            trow.appendChild(td3); 
+            
+            tbody.appendChild(trow);                    // linking the row to the table
+        }
+
+        // function to add all the records to the table
+        function AddAllItemsToTable(TheUsers){
+            number = 0;
+            tbody.innerHTML=" ";
+            TheUsers.array.forEach(element => {
+                AddItemToTable(element.name, element.status);
+            });
+        }
+
+        // get all data 
+        function GetAllDataOnce(){
+            const dbRef = ref(db);
+            get(child(dbRef,"SkillMateDatabase"))
+            .then((snapshot)=>{
+                var users = [];
+                snapshot.forEach(childSnapshot => {
+                    users.push(childSnapshot.val());
+                });
+                AddAllItemsToTable(users);
+            })
+        }

@@ -1,0 +1,17 @@
+{
+  "name": "skillmate_website",
+  "version": "1.0.0",
+  "description": "This is the repo for the SkillMate Website!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "adriana",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.19.1"
+  }
+}
+
+
