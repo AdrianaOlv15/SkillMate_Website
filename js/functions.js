@@ -134,6 +134,11 @@ person8.addcontact1("DISCORD", "ViktorYuri#3333"); person8.addcontact2("WEBSITE"
 function start(){
   window.location.replace('Pages/skills_menu.html');
 }
+
+function checkWhoIsHere(){
+  window.location.replace('Pages/full_list.html');
+} 
+
 // From Skill Menu --> Skill Page
 function setSkill_moveSkillPage (skillNum){
   sessionStorage.setItem("Skill_Title", skillTitlesArray[skillNum]);
@@ -148,9 +153,7 @@ function movePersonPage(tagName){
   window.location.replace('person_page.html'); // page change
 }
 
-function whoshere(){
-  window.location.replace('Pages/full_list.html');
-}
+
 // MOVING BACK THRU PAGES ///////////////////////////////////////////////////////////////////////    
 
 // From Person's Page --> Skill Page
