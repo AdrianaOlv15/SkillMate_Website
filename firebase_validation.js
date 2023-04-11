@@ -48,11 +48,13 @@ function read_db(){
     onValue(connect_db, (snapshot) => {
         snapshot.forEach(childSnapshot=>{
             let username = childSnapshot.key;
-            let status = childSnapshot.val().status;
+            let status = childSnapshot.val().status.toString();
             let status2 = '0';
-            if (status == 'true'){status2 = '1'}
+            if (status == "true"){status2 = '1'}
 
-            console.log("Username: " + username + " Status: " + status2 );
+            console.log("Username: " + username + " Status2: " + status2 );
+            console.log("Real Status: " + status);
+
             sessionStorage.setItem(username,status2);
         });
     })
