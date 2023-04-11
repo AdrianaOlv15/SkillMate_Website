@@ -126,11 +126,11 @@ person6.addcontact1("WEBSITE", "surveycorps.org"); person6.addcontact2("PHONE", 
 person7.addcontact1("LINKEDIN", "www.linkedin.com/in/Mike-Zacharias"); person7.addcontact2("PHONE", "(228) 112 - 3455");
 person8.addcontact1("DISCORD", "ViktorYuri#3333"); person8.addcontact2("WEBSITE", "YuriOnIce.com");
 
-// FIREBASE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* FIREBASE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getDatabase, ref, set, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 
-/***** Firebase config *****/
+
 const firebaseConfig = {
     apiKey: "AIzaSyC_jgj9zfAr5KIVQXlKPXby5Od2BOaTnGM",
     authDomain: "rpi-mlx90614-821e6.firebaseapp.com",
@@ -141,7 +141,6 @@ const firebaseConfig = {
     appId: "1:213693056033:web:cca76584faaa68919b0f60"
 };
 
-/***** Initialize Firebase *****/
 const app = initializeApp(firebaseConfig);
 
 function read_db() {
@@ -158,9 +157,9 @@ function read_db() {
   })
 }
 
-/***** call read data function *****/
 var read_data_from_firebase = document.getElementById("read_data_from_firebase");
 read_data_from_firebase.addEventListener('click', read_db);
+*/
 
 
 // MOVING FORWARD THRU PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
