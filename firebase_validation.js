@@ -51,7 +51,7 @@ function read_db() {
         snapshot.forEach(childSnapshot=>{
             let keyName = childSnapshot.key;
             let data = childSnapshot.val();
-            console.log("Key_" + r + ': ' + keyName + " Value_:" + r + ': ' + data );
+            console.log("Username: " + keyName + " Status: " + data );
         });
     })
     /*function call_loop_print(retrieve_data){
