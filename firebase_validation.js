@@ -45,22 +45,22 @@ function write_db() {
 function read_db() {
     var db = getDatabase();
     var connect_db = ref(db, 'Check-in/');
-    var retrieve_data='';
+    //var retrieve_data='';
     console.log("DEBUG: Read function");
     onValue(connect_db, (snapshot) => {
-        retrieve_data = snapshot.val();
-        call_loop_print(retrieve_data);
-        document.getElementById("display_read_data").innerHTML =  "<pre>" + "user_name: " + retrieve_data.user_name +
-                '\n' + "user_name_password: " + retrieve_data.user_name_password + "</pre>";
-        })
-    function call_loop_print(retrieve_data){
+        snapshot.forEach(childSnapshot=>{
+            let keyName = childSnapshot.key;
+            let data = childSnapshot.val();
+            console.log("Key_" + r + ': ' + keyName + " Value_:" + r + ': ' + data );
+        });
+    })
+    /*function call_loop_print(retrieve_data){
         for (var r=0;r<Object.entries(retrieve_data).length;r++){
             var key = Object.keys(retrieve_data)[r];
-            var value = Object.keys(retrieve_data)[r].status;
-            console.log("data gathered:" + Object.keys(retrieve_data));
+            //var value = Object.keys(retrieve_data)[r].status;
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
- }
+    }*/
 }
 /***** call write data function *****/
 var write_data_to_firebase = document.getElementById("write_data_to_firebase");
