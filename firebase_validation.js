@@ -60,5 +60,5 @@ function read_db() {
 //write_data_to_firebase.addEventListener('click', write_db);
 
 /***** call read data function *****/
-var read_data_from_firebase = document.getElementById("read_data_from_firebase");
-read_data_from_firebase.addEventListener('click', read_db);
+//var read_data_from_firebase = document.getElementById("read_data_from_firebase");
+//read_data_from_firebase.addEventListener('click', read_db);
