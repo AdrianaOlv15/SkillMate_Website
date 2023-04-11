@@ -61,20 +61,9 @@ function read_db() {
             //var value = Object.keys(retrieve_data)[r].status;
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
-    }
+    }*/
 }
-function get() {
-    var username = document.getElementById('username').value
-  
-    
-    user_ref.on('value', function(snapshot) {
-      var data = snapshot.val()
-  
-      alert(data.email)
-  
-    })
-  
-}
+
 /***** call write data function *****/
 var write_data_to_firebase = document.getElementById("write_data_to_firebase");
 write_data_to_firebase.addEventListener('click', write_db);
