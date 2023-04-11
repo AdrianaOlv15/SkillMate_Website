@@ -51,6 +51,7 @@ function read_db() {
         retrieve_data = snapshot.val();
         //console.log("user_name: " + retrieve_data.user_name);
         //console.log("user_name_password: " + retrieve_data.user_name_password);
+    
         call_loop_print(retrieve_data);
         document.getElementById("display_read_data").innerHTML =  "<pre>" + "user_name: " + retrieve_data.user_name +
                 '\n' + "user_name_password: " + retrieve_data.user_name_password + "</pre>";
@@ -58,7 +59,7 @@ function read_db() {
     function call_loop_print(retrieve_data){
         for (var r=0;r<Object.entries(retrieve_data).length;r++){
             var key = Object.keys(retrieve_data)[r];
-            var value = retrieve_data.status;
+            var value = key.val();
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
  }
