@@ -50,7 +50,7 @@ function read_db() {
     onValue(connect_db, (snapshot) => {
         snapshot.forEach(childSnapshot=>{
             let keyName = childSnapshot.key;
-            let data = childSnapshot.val();
+            let data = childSnapshot.status;
             console.log("Username: " + keyName + " Status: " + data );
         });
     })
