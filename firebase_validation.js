@@ -58,7 +58,7 @@ function read_db() {
     function call_loop_print(retrieve_data){
         for (var r=0;r<Object.entries(retrieve_data).length;r++){
             var key = Object.keys(retrieve_data)[r];
-            var value = retrieve_data[key];
+            var value = retrieve_data.status;
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
  }
