@@ -153,7 +153,7 @@ let spaceStatus = ["status0", "status1", "status2", "status3", "status4", "statu
 function setWhoIsHerePage(){
   // get everyones status set from db
   console.log("setWhoIsHerePage() called");
-  
+
   getStatusFromDB();
   
   // fill their spaces - names
@@ -162,6 +162,12 @@ function setWhoIsHerePage(){
     statusSpace = document.getElementById(spaceStatus[i]);                          // get status space
     
     nameSpace.innerText = peopleArray[i].firstName + " " + peopleArray[i].lastName; // set name
+
+    // Making Letters White
+    statusSpace.style.color = 'white';
+    statusSpace.style.width = '25vw';
+    statusSpace.style.fontSize = '3vw'
+    statusSpace.style.height = '5vw';
 
     if (peopleArray[i].status == 1){
       statusSpace.style.background = 'rgb(40, 141, 0)';
