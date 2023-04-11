@@ -49,9 +49,6 @@ function read_db() {
     console.log("DEBUG: Read function");
     onValue(connect_db, (snapshot) => {
         retrieve_data = snapshot.val();
-        console.log("user_name: " + retrieve_data.user_name);
-        console.log("user_name_password: " + retrieve_data.user_name_password);
-    
         call_loop_print(retrieve_data);
         document.getElementById("display_read_data").innerHTML =  "<pre>" + "user_name: " + retrieve_data.user_name +
                 '\n' + "user_name_password: " + retrieve_data.user_name_password + "</pre>";
@@ -59,7 +56,8 @@ function read_db() {
     function call_loop_print(retrieve_data){
         for (var r=0;r<Object.entries(retrieve_data).length;r++){
             var key = Object.keys(retrieve_data)[r];
-            var value = "status goes here"
+            var value = Object.keys(retrieve_data)[r].status;
+            console.log("data gathered:" + Object.keys(retrieve_data));
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
  }
