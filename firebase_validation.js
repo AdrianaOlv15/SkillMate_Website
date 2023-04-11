@@ -44,7 +44,6 @@ function write_db() {
 /***** read data from firebase *****/
 function read_db() {
     var db = getDatabase();
-    var user_ref = db.ref('users/' + username)
     var connect_db = ref(db, 'Check-in/');
     //var retrieve_data='';
     console.log("DEBUG: Read function");
