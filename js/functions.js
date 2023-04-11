@@ -10,7 +10,10 @@ let spacesArray = ["p0_space", "p1_space", "p2_space", "p3_space", "p4_space", "
 
 
 let statusArray = ["p0_status", "p1_status", "p2_status", "p3_status", "p4_status", "p5_status",
-                   "p6_status", "p7_status", "p8_status","p9_status"];                 
+                   "p6_status", "p7_status", "p8_status","p9_status"];   
+
+
+                 
 
 // Person Object                
 function Person(first, last, org, print3d, solder, prog, graph, photo, model3d, time, 
@@ -90,6 +93,10 @@ function Person(first, last, org, print3d, solder, prog, graph, photo, model3d, 
       else if (skillNum == 9){ return this.marketing_descr; }// #9
       else if (skillNum == 10){ return this.remoteMeet_descr; }// #10
     }
+
+    this.setStatus = function(input){
+      this.status = input;
+    }
 }
 
 // 9 People Objects to create mock data! 
@@ -126,40 +133,36 @@ person6.addcontact1("WEBSITE", "surveycorps.org"); person6.addcontact2("PHONE", 
 person7.addcontact1("LINKEDIN", "www.linkedin.com/in/Mike-Zacharias"); person7.addcontact2("PHONE", "(228) 112 - 3455");
 person8.addcontact1("DISCORD", "ViktorYuri#3333"); person8.addcontact2("WEBSITE", "YuriOnIce.com");
 
-/* FIREBASE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-import { getDatabase, ref, set, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+// FIREBASE //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-const firebaseConfig = {
-    apiKey: "AIzaSyC_jgj9zfAr5KIVQXlKPXby5Od2BOaTnGM",
-    authDomain: "rpi-mlx90614-821e6.firebaseapp.com",
-    databaseURL: "https://rpi-mlx90614-821e6-default-rtdb.firebaseio.com",
-    projectId: "rpi-mlx90614-821e6",
-    storageBucket: "rpi-mlx90614-821e6.appspot.com",
-    messagingSenderId: "213693056033",
-    appId: "1:213693056033:web:cca76584faaa68919b0f60"
-};
-
-const app = initializeApp(firebaseConfig);
-
-function read_db() {
-  var db = getDatabase();
-  var connect_db = ref(db, 'Check-in/');
-  console.log("DEBUG: Read function");
-  onValue(connect_db, (snapshot) => {
-      snapshot.forEach(childSnapshot=>{
-          let username = childSnapshot.key;
-          let status = childSnapshot.val().status;
-          console.log("Username: " + username + " Status: " + status );
-          sessionStorage.setItem(username,status);
-      });
-  })
+function getStatusFromDB(){
+  person0.setStatus(sessionStorage.getItem("Kenny Ackerman"));
+  person1.setStatus(sessionStorage.getItem("Adriana Olvera"));
+  person2.setStatus(sessionStorage.getItem("Mira Sweis"));
+  person3.setStatus(sessionStorage.getItem("Jazmin Santoyo"));
+  person4.setStatus(sessionStorage.getItem("Alejandro Perez"));
+  person5.setStatus(sessionStorage.getItem("Labiba Hussien"));
+  person6.setStatus(sessionStorage.getItem("Erwin Smith"));
+  person7.setStatus(sessionStorage.getItem("Mike Zacharias"));
+  person8.setStatus(sessionStorage.getItem("Viktor Nikiforov"));
 }
 
-var read_data_from_firebase = document.getElementById("read_data_from_firebase");
-read_data_from_firebase.addEventListener('click', read_db);
-*/
+let spacesNames = ["space0", "space1", "space2", "space3", "space4", "space5", "space6", "space7", "space8"];
+let spaceStatus = ["status0", "status1", "status2", "status3", "status4", "status5", "status6", "status7", "status8"];
+
+function setWhoIsHerePage(){
+  // get everyones status set from db
+  getStatusFromDB();
+  
+  // fill their spaces - names
+  for(let i = 0; i < spacesNames.length; i++){
+    nameSpace = document.getElementById(spacesNames[i]);                            // get name space
+    statusSpace = document.getElementById(spaceStatus[i]);                          // get status space
+    
+    nameSpace.innerText = peopleArray[i].firstName + " " + peopleArray[i].lastName; // set name
+    statusSpace.innerText = peopleArray[i].status;                                  // set status
+  }
+}
 
 
 // MOVING FORWARD THRU PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
