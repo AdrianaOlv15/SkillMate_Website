@@ -238,7 +238,9 @@ function updateSkillPage () {
 }
 
 function setPeopleList(){
-  
+
+  getStatusFromDB();
+   
   skillNum = sessionStorage.getItem("Skill_Num");
 
   var space = 0;
