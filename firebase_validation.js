@@ -1,5 +1,4 @@
-/***** ..codeauthor:: Muthukumar Subramanian *****/
-/*****  HTML JavaScript to Write and Read on the Google Firebase *****/
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getDatabase, ref, set, child, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
 
@@ -17,7 +16,7 @@ const firebaseConfig = {
 /***** Initialize Firebase *****/
 const app = initializeApp(firebaseConfig);
 
-/***** write data to firebase *****/
+/***** write data to firebase ****
 function write_db() {
     console.log("DEBUG: Write function");
     var db = getDatabase();
@@ -39,33 +38,26 @@ function write_db() {
         console.log(err.code);
         console.log(err.message);
     })
-}
+}*/
 
 /***** read data from firebase *****/
 function read_db() {
     var db = getDatabase();
     var connect_db = ref(db, 'Check-in/');
-    //var retrieve_data='';
     console.log("DEBUG: Read function");
     onValue(connect_db, (snapshot) => {
         snapshot.forEach(childSnapshot=>{
-            let keyName = childSnapshot.key;
-            let data = childSnapshot.val().status;
-            console.log("Username: " + keyName + " Status: " + data );
+            let username = childSnapshot.key;
+            let status = childSnapshot.val().status;
+            console.log("Username: " + username + " Status: " + status );
+            sessionStorage.setItem(username,status);
         });
     })
-    /*function call_loop_print(retrieve_data){
-        for (var r=0;r<Object.entries(retrieve_data).length;r++){
-            var key = Object.keys(retrieve_data)[r];
-            //var value = Object.keys(retrieve_data)[r].status;
-            console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
-           }
-    }*/
 }
 
 /***** call write data function *****/
-var write_data_to_firebase = document.getElementById("write_data_to_firebase");
-write_data_to_firebase.addEventListener('click', write_db);
+//var write_data_to_firebase = document.getElementById("write_data_to_firebase");
+//write_data_to_firebase.addEventListener('click', write_db);
 
 /***** call read data function *****/
 var read_data_from_firebase = document.getElementById("read_data_from_firebase");
