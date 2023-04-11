@@ -44,13 +44,14 @@ function write_db() {
 /***** read data from firebase *****/
 function read_db() {
     var db = getDatabase();
+    var user_ref = db.ref('users/' + username)
     var connect_db = ref(db, 'Check-in/');
     //var retrieve_data='';
     console.log("DEBUG: Read function");
     onValue(connect_db, (snapshot) => {
         snapshot.forEach(childSnapshot=>{
             let keyName = childSnapshot.key;
-            let data = childSnapshot.status;
+            let data = childSnapshot.val().status;
             console.log("Username: " + keyName + " Status: " + data );
         });
     })
@@ -60,7 +61,19 @@ function read_db() {
             //var value = Object.keys(retrieve_data)[r].status;
             console.log("Key_" + r + ': ' + key + " Value_:" + r + ': ' + value );
            }
-    }*/
+    }
+}
+function get() {
+    var username = document.getElementById('username').value
+  
+    
+    user_ref.on('value', function(snapshot) {
+      var data = snapshot.val()
+  
+      alert(data.email)
+  
+    })
+  
 }
 /***** call write data function *****/
 var write_data_to_firebase = document.getElementById("write_data_to_firebase");
