@@ -152,6 +152,8 @@ let spaceStatus = ["status0", "status1", "status2", "status3", "status4", "statu
 
 function setWhoIsHerePage(){
   // get everyones status set from db
+  console.log("setWhoIsHerePage() called");
+  
   getStatusFromDB();
   
   // fill their spaces - names
@@ -174,7 +176,6 @@ function setWhoIsHerePage(){
     }
   }
 }
-window.onload = setWhoIsHerePage();
 
 
 // MOVING FORWARD THRU PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
