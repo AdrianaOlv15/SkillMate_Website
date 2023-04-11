@@ -49,8 +49,11 @@ function read_db(){
         snapshot.forEach(childSnapshot=>{
             let username = childSnapshot.key;
             let status = childSnapshot.val().status;
-            console.log("Username: " + username + " Status: " + status );
-            sessionStorage.setItem(username,status);
+            let status2 = '0';
+            if (status == 'true'){status2 = '1'}
+
+            console.log("Username: " + username + " Status: " + status2 );
+            sessionStorage.setItem(username,status2);
         });
     })
 }

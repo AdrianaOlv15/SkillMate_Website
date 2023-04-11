@@ -100,15 +100,15 @@ function Person(first, last, org, print3d, solder, prog, graph, photo, model3d, 
 }
 
 // 9 People Objects to create mock data! 
-let person0 = new Person("Kenny", "Ackerman",   "Survey Corps",         0, 0, 1, 1, 1, 0, 1, 1, 1, 1,1);
+let person0 = new Person("Kenny", "Ackerman",   "Survey Corps",         0, 0, 1, 1, 1, 0, 1, 1, 1, 1,0);
 let person1 = new Person("Adriana", "Olvera",   "NVIDIA Industries",    1, 0, 1, 1, 1, 0, 0, 1, 1, 0,0);
-let person2 = new Person("Mira", "Sweis",       "Microsoft",            1, 0, 0, 1, 1, 1, 0, 1, 1, 0,1);
+let person2 = new Person("Mira", "Sweis",       "Microsoft",            1, 0, 0, 1, 1, 1, 0, 1, 1, 0,0);
 let person3 = new Person("Jazmin", "Santoyo",   "GE Navigation",        1, 1, 0, 1, 1, 1, 0, 0, 1, 0,0);
-let person4 = new Person("Alejandro", "Perez",  "Analog Devices Inc.",  1, 1, 0, 0, 1, 1, 1, 0, 1, 1,1);
+let person4 = new Person("Alejandro", "Perez",  "Analog Devices Inc.",  1, 1, 0, 0, 1, 1, 1, 0, 1, 1,0);
 let person5 = new Person("Labiba", "Hussien",   "FitBit Corporation",   1, 1, 1, 0, 1, 1, 1, 0, 0, 1,0);
-let person6 = new Person("Erwin", "Smith",      "Bay Computer Asso.",   1, 1, 1, 0, 0, 1, 1, 1, 0, 1,1);
+let person6 = new Person("Erwin", "Smith",      "Bay Computer Asso.",   1, 1, 1, 0, 0, 1, 1, 1, 0, 1,0);
 let person7 = new Person("Mike", "Zacharias",   "OnShape Inc.",         0, 1, 1, 1, 0, 1, 1, 1, 0, 1,0);
-let person8 = new Person("Viktor", "Nikiforov", "Ekotrope Laboratory",  0, 1, 1, 1, 0, 0, 1, 1, 1, 1,1);
+let person8 = new Person("Viktor", "Nikiforov", "Ekotrope Laboratory",  0, 1, 1, 1, 0, 0, 1, 1, 1, 1,0);
 let peopleArray = [person0, person1, person2, person3, person4, person5, person6, person7, person8];
 
 // Adding profile pictures to each people
@@ -160,9 +160,21 @@ function setWhoIsHerePage(){
     statusSpace = document.getElementById(spaceStatus[i]);                          // get status space
     
     nameSpace.innerText = peopleArray[i].firstName + " " + peopleArray[i].lastName; // set name
-    statusSpace.innerText = peopleArray[i].status;                                  // set status
+
+    if (peopleArray[i].status == 1){
+      statusSpace.style.background = 'rgb(40, 141, 0)';
+      statusSpace.innerText = "IN";
+      statusSpace.style.borderStyle = 'solid'; 
+      statusSpace.style.borderColor = 'rgb(40, 141, 0)';
+    } else {
+      statusSpace.style.background = 'rgb(208, 0, 0)';
+      statusSpace.innerText = "OUT";
+      statusSpace.style.borderStyle = 'solid'; 
+      statusSpace.style.borderColor = 'rgb(208, 0, 0)';
+    }
   }
 }
+window.onload = setWhoIsHerePage();
 
 
 // MOVING FORWARD THRU PAGES /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
