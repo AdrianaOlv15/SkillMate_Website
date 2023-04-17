@@ -240,7 +240,7 @@ function updateSkillPage () {
 function setPeopleList(){
 
   getStatusFromDB();
-   
+
   skillNum = sessionStorage.getItem("Skill_Num");
 
   var space = 0;
@@ -329,6 +329,9 @@ function checkSkill (person, skillNum){
 
 function loadProfile(){
  
+  getStatusFromDB();
+  setWhoIsHerePage();
+  
   // get the name of the person we selected
   text = sessionStorage.getItem("Person_Name");
   console.log( "Saved Name:" + text)
