@@ -168,7 +168,7 @@ function setWhoIsHerePage(){
     statusSpace.style.width = '25vw';
     statusSpace.style.fontSize = '3vw'
     statusSpace.style.height = '5vw';
-
+    console.log("Name: " + peopleArray[i].name + "Status: " +peopleArray[i].status)
     if (peopleArray[i].status == 1){
       statusSpace.style.background = 'rgb(40, 141, 0)';
       statusSpace.innerText = "IN";
@@ -330,8 +330,7 @@ function checkSkill (person, skillNum){
 function loadProfile(){
  
   getStatusFromDB();
-  setWhoIsHerePage();
-  
+
   // get the name of the person we selected
   text = sessionStorage.getItem("Person_Name");
   console.log( "Saved Name:" + text)
