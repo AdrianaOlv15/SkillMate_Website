@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&family=Ubuntu:wght@700&display=swap');
 
 body{
-    background-color: rgb(237, 249, 255);
+    background-color: rgb(195, 236, 255);
     text-align: center;
 }
 
@@ -73,19 +73,19 @@ body{
 .skills_backBtnSpace {      
     font-size:3vw; 
     border-style:solid; 
-    border-color:rgb(237, 249, 255); 
-    background-color:rgb(237, 249, 255);
+    border-color:rgb(195, 236, 255);
+    background-color:rgb(195, 236, 255);
     color: rgb(0, 51, 76); 
     padding: 10px;
-    height: 6vw;
+    height: 3vw;
     width: 64vw;
 }
 
 .person_backBtnSpace {      
     font-size:3vw; 
     border-style:solid; 
-    border-color:rgb(237, 249, 255); 
-    background-color:rgb(237, 249, 255);
+    border-color:rgb(195, 236, 255);
+    background-color:rgb(195, 236, 255);
     color: rgb(0, 51, 76); 
     padding: 10px;
     height: 6vw;
