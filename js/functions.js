@@ -124,7 +124,7 @@ person8.addPicture("../images/viktor.PNG");
 
 // Adding contact info for people
 person0.addcontact1("INSTAGRAM","@kenny_acker"); person0.addcontact2("EMAIL", "kennyackerman@gmail.com");
-person1.addcontact1("INSTAGRAM", "@adriana_olv15"); person1.addcontact2("DISCORD", "AdrianaOC#1108");
+person1.addcontact1("INSTAGRAM", '<a href="www.instagram.com/adriana_olv15/?hl=en">'); person1.addcontact2("DISCORD", "AdrianaOC#1108");
 person2.addcontact1("LINKEDIN","www.linkedin.com/in/mira-06"); person2.addcontact2("DISCORD", "MiraSW#1234");
 person3.addcontact1("LINKEDIN","www.linkedin.com/in/Jazmin-SH08"); person3.addcontact2("INSTAGRAM", "@jaz_santoyo11");
 person4.addcontact1("EMAIL", "ale_perez@yahoo.com"); person4.addcontact2("DISCORD", "Alejandro06#5432");
